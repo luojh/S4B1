@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_playback"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context="com.example.music.MainActivityMusic" >
+    
+    <ListView 
+        android:id="@+id/listMusic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+    
+   <RelativeLayout
+       android:id="@+id/rltControl"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:layout_alignParentBottom="true" >
+        
+        <ImageView
+            android:id="@+id/music_album"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_launcher"
+            android:contentDescription="@string/songp" />
+        
+        <RelativeLayout 
+            android:id="@+id/rltSongAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/music_album"
+            android:layout_toRightOf="@id/music_album"
+            android:layout_toEndOf="@id/music_album" >
+            
+            <TextView 
+               android:id="@+id/text01"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentLeft="true"
+               android:layout_marginStart="5.0dp"
+               android:layout_marginLeft="5.0dp"
+               android:layout_marginTop="5.0dp"
+               android:text="@string/singer" />
+            
+            <TextView 
+                android:id="@+id/text02" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text01"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="5.0dp"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginTop="8.0dp"
+                android:text="@string/time" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnList"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/btnPlay"
+            android:layout_toLeftOf="@+id/btnPlay"
+            android:background="@drawable/list" />        
+        
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/music_album"
+            android:layout_toStartOf="@+id/btnNext"
+            android:layout_toLeftOf="@+id/btnNext"
+            android:background="@drawable/play" />
+        
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/music_album"
+            android:background="@drawable/next" />
+
+        
+    </RelativeLayout>
+
+</RelativeLayout>

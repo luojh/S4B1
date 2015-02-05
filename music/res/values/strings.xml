@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">RainyDayMusic</string>
+    <string name="singer">singer</string>
+    <string name="time">time</string>
+    <string name="songp">songp</string>
+
+</resources>
